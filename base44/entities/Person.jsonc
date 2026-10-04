@@ -1,0 +1,33 @@
+{
+  "name": "Person",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "email_aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_batch_member": {
+      "type": "boolean",
+      "default": true
+    },
+    "received_count": {
+      "type": "number",
+      "default": 0
+    },
+    "written_count": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

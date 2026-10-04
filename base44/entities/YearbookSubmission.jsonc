@@ -1,0 +1,495 @@
+{
+  "name": "YearbookSubmission",
+  "type": "object",
+  "properties": {
+    "Timestamp": {
+      "type": "string"
+    },
+    "Username": {
+      "type": "string"
+    },
+    "Aarohi Dhir": {
+      "type": "string"
+    },
+    "Abhishek M. Thomas": {
+      "type": "string"
+    },
+    "Abhishek Singh Mandloi": {
+      "type": "string"
+    },
+    "Aditi Mehrotra": {
+      "type": "string"
+    },
+    "Aditya Vikram Jain": {
+      "type": "string"
+    },
+    "Akansha Singh": {
+      "type": "string"
+    },
+    "Alina Hasan": {
+      "type": "string"
+    },
+    "Aman Chopra": {
+      "type": "string"
+    },
+    "Amrita Korwar": {
+      "type": "string"
+    },
+    "Anjali Jain": {
+      "type": "string"
+    },
+    "Ankit Bhatia": {
+      "type": "string"
+    },
+    "Anshu Bhatia": {
+      "type": "string"
+    },
+    "Anubhav Rawat": {
+      "type": "string"
+    },
+    "Anurag Shekhar": {
+      "type": "string"
+    },
+    "Aritreyee Chaudhuri": {
+      "type": "string"
+    },
+    "Arushi Tandon": {
+      "type": "string"
+    },
+    "Ashish Jain": {
+      "type": "string"
+    },
+    "Atul Singh": {
+      "type": "string"
+    },
+    "Chetan Raghav": {
+      "type": "string"
+    },
+    "Dewina Ravindra Dhruve": {
+      "type": "string"
+    },
+    "Dileep Tiwari": {
+      "type": "string"
+    },
+    "Divya Sud": {
+      "type": "string"
+    },
+    "Rohit Goswami": {
+      "type": "string"
+    },
+    "Hirak Kapasi": {
+      "type": "string"
+    },
+    "Jasdeep Kaur": {
+      "type": "string"
+    },
+    "Jayesh Mirchandani": {
+      "type": "string"
+    },
+    "Joseph Jacob": {
+      "type": "string"
+    },
+    "Joy Sekhri": {
+      "type": "string"
+    },
+    "Kajri Saxena": {
+      "type": "string"
+    },
+    "Ketaki Bhave": {
+      "type": "string"
+    },
+    "Khushboo Banthia": {
+      "type": "string"
+    },
+    "Kirti Nuwal": {
+      "type": "string"
+    },
+    "Kshama Singh": {
+      "type": "string"
+    },
+    "Kunwarbir Singh": {
+      "type": "string"
+    },
+    "Mahesh Nair": {
+      "type": "string"
+    },
+    "Manas Mukul Yadav": {
+      "type": "string"
+    },
+    "Mudit Vyas": {
+      "type": "string"
+    },
+    "Neha Chowdhury": {
+      "type": "string"
+    },
+    "Neha Damle": {
+      "type": "string"
+    },
+    "Nikhita Kapur": {
+      "type": "string"
+    },
+    "Nishant Khanna": {
+      "type": "string"
+    },
+    "Nikhil Patil": {
+      "type": "string"
+    },
+    "Phalguni Aneja": {
+      "type": "string"
+    },
+    "Pooja Jha": {
+      "type": "string"
+    },
+    "Prabhat Gupta": {
+      "type": "string"
+    },
+    "Prateek Rajendra Malpani": {
+      "type": "string"
+    },
+    "Pratham Varshney": {
+      "type": "string"
+    },
+    "Pratyush Sharma": {
+      "type": "string"
+    },
+    "Pritish Mukherjee": {
+      "type": "string"
+    },
+    "Priyanka Bhatnagar": {
+      "type": "string"
+    },
+    "Priyanka Shah": {
+      "type": "string"
+    },
+    "Rakesh Sukumar": {
+      "type": "string"
+    },
+    "Ranajay Sengupta": {
+      "type": "string"
+    },
+    "Rebecca Ann Toms": {
+      "type": "string"
+    },
+    "Reshma Vatsa": {
+      "type": "string"
+    },
+    "Rishabh Tickoo": {
+      "type": "string"
+    },
+    "Saikat Bagchi": {
+      "type": "string"
+    },
+    "Sanchita Dasgupta": {
+      "type": "string"
+    },
+    "Sandhya Ramakrishnan": {
+      "type": "string"
+    },
+    "Sangeet Paryani": {
+      "type": "string"
+    },
+    "Sarah Banerjee": {
+      "type": "string"
+    },
+    "Shaili Desai": {
+      "type": "string"
+    },
+    "Shashank Yadav": {
+      "type": "string"
+    },
+    "Shitiz Dogra": {
+      "type": "string"
+    },
+    "Shrey Chakravorty": {
+      "type": "string"
+    },
+    "Shreya Sridhar": {
+      "type": "string"
+    },
+    "Siddharth Sethumadhavan": {
+      "type": "string"
+    },
+    "Silky Agarwal": {
+      "type": "string"
+    },
+    "Smriti": {
+      "type": "string"
+    },
+    "Soma Panda": {
+      "type": "string"
+    },
+    "Sonal Gupta": {
+      "type": "string"
+    },
+    "Srishti Yadav": {
+      "type": "string"
+    },
+    "Sucheta Baliga": {
+      "type": "string"
+    },
+    "Surbhi Tiwari": {
+      "type": "string"
+    },
+    "Tarun Rawat": {
+      "type": "string"
+    },
+    "Tulika Jha": {
+      "type": "string"
+    },
+    "Umang Pandya": {
+      "type": "string"
+    },
+    "Varun Panicker": {
+      "type": "string"
+    },
+    "Vidya Nair": {
+      "type": "string"
+    },
+    "Yashasvi Tandon": {
+      "type": "string"
+    },
+    "Abhimanyu Roy": {
+      "type": "string"
+    },
+    "Abhishek Maruti Rane": {
+      "type": "string"
+    },
+    "Aditi Bose": {
+      "type": "string"
+    },
+    "Aditya Arun Basole": {
+      "type": "string"
+    },
+    "Aishwarya Padmanabhan": {
+      "type": "string"
+    },
+    "Akash Delsaria": {
+      "type": "string"
+    },
+    "Amal Thomas Roy": {
+      "type": "string"
+    },
+    "Ambuj Saxena": {
+      "type": "string"
+    },
+    "Anand V Sankar": {
+      "type": "string"
+    },
+    "Anjori Arora": {
+      "type": "string"
+    },
+    "Ankit Jain": {
+      "type": "string"
+    },
+    "Anshul Kandpal": {
+      "type": "string"
+    },
+    "Anupam Dhar": {
+      "type": "string"
+    },
+    "Aparajita Verma": {
+      "type": "string"
+    },
+    "Arpita Atyunita Sahoo": {
+      "type": "string"
+    },
+    "Ashish Shah": {
+      "type": "string"
+    },
+    "Ashwini Ramakrishnan": {
+      "type": "string"
+    },
+    "Candida D'souza": {
+      "type": "string"
+    },
+    "Dennis Daniel": {
+      "type": "string"
+    },
+    "Dhruval Doshi": {
+      "type": "string"
+    },
+    "Divya Agrawal": {
+      "type": "string"
+    },
+    "Divyangana Rakesh": {
+      "type": "string"
+    },
+    "Ganesh Shankar": {
+      "type": "string"
+    },
+    "Jagriti Chhateja": {
+      "type": "string"
+    },
+    "Jenny H. Mansuria": {
+      "type": "string"
+    },
+    "Abhishek Joshi": {
+      "type": "string"
+    },
+    "Juhi Jain": {
+      "type": "string"
+    },
+    "Karthik Balachander V": {
+      "type": "string"
+    },
+    "Khadija Shabbir Ekhlas": {
+      "type": "string"
+    },
+    "Khushboo sood": {
+      "type": "string"
+    },
+    "Kriti Takkar": {
+      "type": "string"
+    },
+    "Kshitij Rajoria": {
+      "type": "string"
+    },
+    "Kush Anand": {
+      "type": "string"
+    },
+    "Maltesh Ashrit": {
+      "type": "string"
+    },
+    "Mary Eapen": {
+      "type": "string"
+    },
+    "Mohammed Mohtashim Hashmi": {
+      "type": "string"
+    },
+    "Nandeetha Venkataramani": {
+      "type": "string"
+    },
+    "Neha Mansharamani": {
+      "type": "string"
+    },
+    "Niharika Talwar": {
+      "type": "string"
+    },
+    "Nikunjkumar Parikh": {
+      "type": "string"
+    },
+    "Pallavi Chauhan": {
+      "type": "string"
+    },
+    "Pertash Koul": {
+      "type": "string"
+    },
+    "Piyush Dhaniwal": {
+      "type": "string"
+    },
+    "Pooja Shailesh Monani": {
+      "type": "string"
+    },
+    "Pratap Kaul": {
+      "type": "string"
+    },
+    "Prateek Vaid": {
+      "type": "string"
+    },
+    "Pratik Bengani": {
+      "type": "string"
+    },
+    "Pritha Ashok Rathi": {
+      "type": "string"
+    },
+    "Priya Krishnan": {
+      "type": "string"
+    },
+    "Priyanka Krishnan": {
+      "type": "string"
+    },
+    "Rahul Raichura": {
+      "type": "string"
+    },
+    "Ramandeep Narula": {
+      "type": "string"
+    },
+    "Rashi Pal": {
+      "type": "string"
+    },
+    "Reshma Harikumar": {
+      "type": "string"
+    },
+    "Revant Pande": {
+      "type": "string"
+    },
+    "Ritu Jhajharia": {
+      "type": "string"
+    },
+    "Saket Todi": {
+      "type": "string"
+    },
+    "Sandeep Mocherla": {
+      "type": "string"
+    },
+    "Sandhya Venkat": {
+      "type": "string"
+    },
+    "Sanjana Ahuja": {
+      "type": "string"
+    },
+    "Shailendra Mahani": {
+      "type": "string"
+    },
+    "Sharad Kumar": {
+      "type": "string"
+    },
+    "Shashvat Shukla": {
+      "type": "string"
+    },
+    "Shreshth Varshney": {
+      "type": "string"
+    },
+    "Shreya Shukla": {
+      "type": "string"
+    },
+    "Siddharth Mohanty": {
+      "type": "string"
+    },
+    "Siddharth Sriram": {
+      "type": "string"
+    },
+    "Sipra Sahoo": {
+      "type": "string"
+    },
+    "Snigdha Sunil Kumar": {
+      "type": "string"
+    },
+    "Sonal Bakliwal": {
+      "type": "string"
+    },
+    "Soumya Jain": {
+      "type": "string"
+    },
+    "Subhankar Rath": {
+      "type": "string"
+    },
+    "Summey Hanshika": {
+      "type": "string"
+    },
+    "Swati Baweja": {
+      "type": "string"
+    },
+    "Tavleen Kaur": {
+      "type": "string"
+    },
+    "Tom Joseph Kunnappallil": {
+      "type": "string"
+    },
+    "Tushar Sehgal": {
+      "type": "string"
+    },
+    "Upasana Dash": {
+      "type": "string"
+    },
+    "Varun Sathees": {
+      "type": "string"
+    },
+    "Vivek Nair": {
+      "type": "string"
+    },
+    "Yukti Batra": {
+      "type": "string"
+    }
+  }
+}

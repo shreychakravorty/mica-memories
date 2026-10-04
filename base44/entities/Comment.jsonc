@@ -1,0 +1,33 @@
+{
+  "name": "Comment",
+  "type": "object",
+  "properties": {
+    "author_email": {
+      "type": "string"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "recipient_name": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "is_deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "source_key": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "author_email",
+    "recipient_name",
+    "message"
+  ]
+}
