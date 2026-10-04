@@ -1,0 +1,25 @@
+import React, { useState } from 'react';
+import { ArrowLeft, Feather, MessageSquare, Loader2 } from 'lucide-react';
+import PersonSearch from '@/components/yearbook/PersonSearch';
+import CommentCard from '@/components/yearbook/CommentCard';
+import DeleteCommentDialog from '@/components/yearbook/DeleteCommentDialog';
+import useProfileComments from '@/components/yearbook/useProfileComments';
+export default function PersonProfile({ person, member, people, onSelect, onDirectory }) {
+  const [tab,setTab]=useState('received');
+  const {data,isLoading,isError,refetch,remove,pending,setPending,busy,actionError}=useProfileComments(person,member);
+  const mine=person.id===member.id; const comments=data?.[tab]||[];
+  const active=comments.filter(c=>!c.is_deleted); const removed=comments.filter(c=>c.is_deleted);
+  const card=c=><CommentCard key={c.id} comment={c} direction={tab} member={member} people={people} onSelect={onSelect} onDelete={remove} busy={busy===c.id}/>;
+  return <main className="max-w-7xl mx-auto px-6 md:px-12 py-9 w-full">
+    <div className="flex flex-col sm:flex-row justify-between gap-5 mb-10"><button onClick={onDirectory} className="text-xs text-muted-foreground flex items-center gap-2 hover:text-primary"><ArrowLeft size={14}/> Back to the batch</button><PersonSearch people={people} onSelect={onSelect}/></div>
+    <section className="border-b border-border pb-9"><p className="text-primary text-[10px] uppercase tracking-[0.24em] mb-5">{mine?'Your corner of the yearbook':'A page from our yearbook'} · 2013</p><div className="flex items-start gap-5"><span className="hidden sm:flex w-20 h-20 border border-primary/20 bg-secondary/60 rounded-full items-center justify-center text-primary font-heading text-3xl shrink-0">{person.name.split(' ').map(n=>n[0]).slice(0,2).join('')}</span><div><h1 className="font-heading text-5xl md:text-6xl tracking-tight">{person.name}</h1><p className="text-sm text-muted-foreground mt-3 leading-relaxed">{mine?'The things they remembered. The words you left behind.':'A little of who they were, in the words of the people around them.'}</p></div></div></section>
+    <div className="flex gap-5 sm:gap-8 border-b border-border mb-8" role="tablist" aria-label="Testimony direction">{[['received',MessageSquare,mine?'Written for you':'Written for them'],['written',Feather,mine?'Words you wrote':'Words they wrote']].map(([key,Icon,label])=><button key={key} role="tab" aria-selected={tab===key} onClick={()=>setTab(key)} className={`py-5 flex items-center gap-2 border-b-2 -mb-px text-xs sm:text-sm ${tab===key?'border-primary text-primary':'border-transparent text-muted-foreground'}`}><Icon size={15}/>{label}<span className="bg-secondary rounded-full text-[10px] px-2 py-0.5">{data?.[key]?.length??'—'}</span></button>)}</div>
+    {actionError&&!pending&&<p role="alert" className="text-destructive text-sm mb-5">{actionError}</p>}
+    {isLoading?<div className="py-16 flex justify-center items-center gap-3 text-sm text-muted-foreground"><Loader2 size={18} className="animate-spin"/> Turning back the pages…</div>:isError?<div className="text-center py-14"><p className="text-destructive">These memories couldn’t load.</p><button onClick={()=>refetch()} className="text-primary underline mt-3">Try again</button></div>:<div role="tabpanel">
+      {!!active.length&&<><p className="text-[10px] uppercase tracking-[0.16em] text-muted-foreground mb-5">{active.length} {active.length===1?'testimony':'testimonies'} · The original words, just as they were</p><div className="columns-1 lg:columns-2 gap-5">{active.map(card)}</div></>}
+      {!active.length&&<div className="text-center border border-dashed border-border rounded-md py-16 px-6"><Feather className="mx-auto text-primary/60 mb-4" size={28} strokeWidth={1}/><h2 className="font-heading text-3xl">A quiet page, still part of the story.</h2><p className="text-sm text-muted-foreground mt-3">{tab==='written'&&!person.email?'No author email for this person was included in the spreadsheet, so we can’t match their written notes yet.':removed.length?'The testimonies on this page have been struck out below.':'No testimonies were found in this part of the original archive.'}</p></div>}
+      {!!removed.length&&<section className="mt-12"><div className="border-t border-border pt-6 mb-5"><h2 className="font-heading text-2xl">Struck-out words <span className="text-sm text-muted-foreground">({removed.length})</span></h2><p className="text-xs text-muted-foreground mt-2">Kept below the memories. The author or recipient can delete these permanently.</p></div><div className="columns-1 lg:columns-2 gap-5">{removed.map(card)}</div></section>}
+    </div>}
+    <DeleteCommentDialog comment={pending} onClose={()=>setPending(null)} onConfirm={()=>remove(pending,true)} busy={!!busy} error={actionError}/>
+  </main>;
+}

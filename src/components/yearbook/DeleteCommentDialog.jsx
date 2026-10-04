@@ -1,0 +1,6 @@
+import React from 'react';
+import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogCancel } from '@/components/ui/alert-dialog';
+import { Loader2 } from 'lucide-react';
+export default function DeleteCommentDialog({ comment, onClose, onConfirm, busy, error }) {
+  return <AlertDialog open={!!comment} onOpenChange={open=>{if(!open&&!busy)onClose();}}><AlertDialogContent className="bg-card"><AlertDialogHeader><AlertDialogTitle className="font-heading text-3xl font-normal">Remove this memory for good?</AlertDialogTitle><AlertDialogDescription>This testimony will be permanently deleted for everyone. This cannot be undone.</AlertDialogDescription></AlertDialogHeader><blockquote className="line-clamp-3 text-sm text-muted-foreground border-l-2 border-primary/40 pl-4 whitespace-pre-wrap">{comment?.message}</blockquote>{error&&<p role="alert" className="text-sm text-destructive">{error}</p>}<AlertDialogFooter><AlertDialogCancel disabled={busy}>Keep it</AlertDialogCancel><button disabled={busy} onClick={onConfirm} className="bg-destructive text-destructive-foreground rounded-md px-4 py-2 text-sm flex justify-center items-center gap-2 disabled:opacity-60">{busy&&<Loader2 size={14} className="animate-spin"/>}Permanently delete</button></AlertDialogFooter></AlertDialogContent></AlertDialog>;
+}

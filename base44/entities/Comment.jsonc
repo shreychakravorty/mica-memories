@@ -29,5 +29,15 @@
     "author_email",
     "recipient_name",
     "message"
-  ]
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {},
+    "delete": {}
+  }
 }
