@@ -36,7 +36,7 @@ export default function Yearbook() {
         {person && <div className="midnight-archivehead"><span>{person.name}</span><button onClick={() => setParams({})} className="midnight-all midnight-navbutton">Show all testimonies</button></div>}
         {person ? <SelectedTestimonies key={person.id} person={person} member={member} people={people} onSelect={select}/> : <ArchiveFeed people={people} onSelect={select}/>}
       </div>
-      <Image className="midnight-archivepic" src="https://media.base44.com/images/public/6ac1a6d5393990fdbc0753b4/4239802cc_generated_4f96d9d1.jpg" alt="Sunlit brick courtyard inspired by MICA’s campus" focalPointY={0.55}/>
+      <Image className="midnight-archivepic" src="https://media.base44.com/images/public/6ac1a6d5393990fdbc0753b4/3a7d4cd76_image.png" alt="MICA’s brick courtyard shaded by green trees" focalPointY={0.55}/>
     </main>
     <YearbookFooter/>
   </div>;
