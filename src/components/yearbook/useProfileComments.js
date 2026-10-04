@@ -8,7 +8,7 @@ export default function useProfileComments(person,member) {
     return {received,written};
   }});
   async function remove(comment,permanent=false) {
-    if(comment.author_email!==member.email&&comment.recipient_name!==member.name) {setError('Only the author or recipient can remove this testimony.');return;}
+    if(!member||(comment.author_email!==member.email&&comment.recipient_name!==member.name)) {setError('Only the author or recipient can remove this testimony.');return;}
     if(comment.is_deleted&&!permanent){setError('');setPending(comment);return;}
     setBusy(comment.id);setError('');
     try {
