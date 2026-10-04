@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { base44 } from '@/api/base44Client';
+import { batchEmails } from '@/components/yearbook/contributorIdentity';
 export default function useProfileComments(person,member) {
   const client=useQueryClient(); const [pending,setPending]=useState(null); const [busy,setBusy]=useState(''); const [error,setError]=useState('');
   const query=useQuery({queryKey:['yearbook-comments',person.id],queryFn:async()=>{
-    const [received,written]=await Promise.all([base44.entities.Comment.filter({recipient_name:person.name},'timestamp',1000),person.email?base44.entities.Comment.filter({author_email:person.email},'timestamp',1000):Promise.resolve([])]);
+    const [received,...writtenLists]=await Promise.all([base44.entities.Comment.filter({recipient_name:person.name},'timestamp',1000),...batchEmails(person).map(email=>base44.entities.Comment.filter({author_email:email},'timestamp',1000))]);
+    const written=[...new Map(writtenLists.flat().map(comment=>[comment.id,comment])).values()].sort((a,b)=>(a.timestamp||'').localeCompare(b.timestamp||''));
     return {received,written};
   }});
   async function remove(comment,permanent=false) {
