@@ -27,23 +27,23 @@
 .midnight-premium .folio-content h2{font-family:Arial,Helvetica,sans-serif;font-size:34px;letter-spacing:-1.4px;line-height:1.1;margin:0;font-weight:700}
 .midnight-all{font-size:13px;color:#101d2a;border-bottom:1px solid #bda16a;padding-bottom:3px}
 .midnight-premium .folio-gallery{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
-.midnight-premium .folio-brick{background:#fff;border:1px solid #e4e2d9;border-radius:10px;padding:25px 27px;box-shadow:0 8px 24px rgba(16,29,42,.045);animation:rise .8s .2s both;margin:0}
+.midnight-premium .folio-brick{--foreground:0 0% 100%;--card:0 0% 17%;--card-foreground:0 0% 100%;--muted-foreground:0 0% 80%;--border:0 0% 27%;background:hsl(var(--card));color:hsl(var(--card-foreground));border:1px solid hsl(var(--border));border-radius:10px;padding:25px 27px;box-shadow:0 8px 24px rgba(16,29,42,.045);animation:rise .8s .2s both;margin:0}
 .midnight-premium .folio-gallery>.folio-brick:first-child{grid-column:1/-1;padding:31px 34px}
 .midnight-premium .folio-brick>div:first-child{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:19px}
 .midnight-premium .folio-brick>div:first-child>div{display:flex;align-items:center;gap:12px;min-width:0}
 .midnight-premium .folio-brick>div:first-child>div>span{width:38px;height:38px;flex-shrink:0;border-radius:50%;background:#e9e5d9;color:#806c42;display:grid;place-items:center;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700}
-.midnight-premium .folio-brick>div:first-child .uppercase{font:10px ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:#737c80;margin:0 0 5px}
-.midnight-premium .folio-brick>div:first-child button,.midnight-premium .folio-brick>div:first-child p:not(.uppercase){font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:600;margin:0;color:#101d2a;overflow-wrap:anywhere}
-.midnight-premium .folio-brick>div:first-child p>span{font:10px ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:#737c80;margin:5px 0 0}
+.midnight-premium .folio-brick>div:first-child .uppercase{font:10px ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:hsl(var(--card-foreground) / .7);margin:0 0 5px}
+.midnight-premium .folio-brick>div:first-child button,.midnight-premium .folio-brick>div:first-child p:not(.uppercase){font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:600;margin:0;color:hsl(var(--card-foreground));overflow-wrap:anywhere}
+.midnight-premium .folio-brick>div:first-child p>span{font:10px ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:hsl(var(--card-foreground) / .7);margin:5px 0 0}
 .midnight-premium .folio-quote{font-family:Georgia,serif;font-size:42px;line-height:.8;color:#bda16a}
-.midnight-premium .folio-brick>p{font-size:12px;color:#68737b;margin:0 0 13px}
+.midnight-premium .folio-brick>p{font-size:12px;color:hsl(var(--card-foreground) / .8);margin:0 0 13px}
 .midnight-premium .folio-brick>p button{color:inherit;text-decoration:none}
-.midnight-premium .folio-message{font-family:Georgia,serif;font-size:18px;line-height:1.55;letter-spacing:-.2px;color:#263641;margin:0 0 25px;white-space:pre-wrap}
+.midnight-premium .folio-message{font-family:Georgia,serif;font-size:18px;line-height:1.55;letter-spacing:-.2px;color:hsl(var(--card-foreground));margin:0 0 25px;white-space:pre-wrap}
 .midnight-premium .folio-brick:not(:first-child) .folio-message{font-size:16px}
-.midnight-premium .folio-foot{border-top:1px solid #ecebe5;padding-top:15px;display:flex;align-items:center;gap:12px;margin-top:0}
-.midnight-premium .folio-foot>div>span{font:10px ui-monospace,monospace;letter-spacing:.06em;color:#727a7e;text-transform:none}
-.midnight-premium .folio-control{border:0;background:transparent;color:#806d43;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:600;padding:6px 2px;cursor:pointer;transition:color .18s,transform .18s}
-.midnight-premium .folio-control:hover{color:#101d2a}.midnight-premium .folio-control:active{transform:scale(.97)}
+.midnight-premium .folio-foot{border-top:1px solid hsl(var(--border));padding-top:15px;display:flex;align-items:center;gap:12px;margin-top:0}
+.midnight-premium .folio-foot>div>span{font:10px ui-monospace,monospace;letter-spacing:.06em;color:hsl(var(--card-foreground) / .7);text-transform:none}
+.midnight-premium .folio-control{border:0;background:transparent;color:hsl(var(--card-foreground));font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:600;padding:6px 2px;cursor:pointer;transition:color .18s,transform .18s}
+.midnight-premium .folio-control:hover{color:hsl(var(--primary))}.midnight-premium .folio-control:active{transform:scale(.97)}
 .midnight-premium .midnight-roastbutton{min-height:38px;padding:9px 16px;border:1px solid hsl(var(--primary));border-radius:22px;background:hsl(var(--primary) / .15);color:hsl(var(--foreground));font-size:13px;gap:7px;transition:background .18s,color .18s,transform .18s}
 .midnight-premium .midnight-roastbutton svg{width:16px;height:16px}
 .midnight-premium .midnight-roastbutton:hover{background:hsl(var(--primary) / .3)}
