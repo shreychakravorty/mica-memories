@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, BookOpen, Users, PenLine } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import EmailEntry from '@/components/yearbook/EmailEntry';
 import YearbookCover from '@/components/yearbook/YearbookCover';
 export default function Welcome({ onEnter }) {
@@ -11,9 +11,6 @@ export default function Welcome({ onEnter }) {
         <EmailEntry onEnter={onEnter}/>
       </section>
       <YearbookCover/>
-    </div>
-    <div className="mt-20 lg:mt-16 border-t border-border/80 pt-7 grid grid-cols-3 gap-4 max-w-xl">
-      {[[Users,'161','familiar names'],[PenLine,'7,937','words from the heart'],[BookOpen,'One','unforgettable chapter']].map(([Icon,n,label])=><div key={label} className="flex items-start gap-3"><Icon size={17} strokeWidth={1.4} className="text-primary mt-1 hidden sm:block"/><div><p className="font-heading text-2xl">{n}</p><p className="text-[10px] sm:text-xs text-muted-foreground mt-1">{label==='words from the heart'?'original testimonies':label}</p></div></div>)}
     </div>
     <p className="flex items-center gap-2 text-[10px] text-muted-foreground mt-7"><Sparkles size={12} strokeWidth={1.3}/> The original 2013 archive. Same words, a new home.</p>
   </main>;
