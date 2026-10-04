@@ -18,11 +18,11 @@ export default function RoastableNote({ comment, children }) {
     finally { setLoading(false); }
   }
   return <>
-    <p aria-live="polite" className={`text-[14px] leading-[1.9] whitespace-pre-wrap break-words ${comment.is_deleted ? 'line-through text-muted-foreground' : 'text-foreground/85'}`}>{roasted ? roast : comment.message}</p>
+    <p aria-live="polite" className={`folio-message text-[14px] leading-[1.9] whitespace-pre-wrap break-words ${comment.is_deleted ? 'line-through text-muted-foreground' : 'text-foreground/85'}`}>{roasted ? roast : comment.message}</p>
     {error && <p role="alert" className="text-xs text-destructive mt-3">{error}</p>}
-    <div className="flex items-center gap-3 mt-7 pt-4 border-t border-border/50">
+    <div className="folio-foot flex items-center gap-3 mt-7 pt-4 border-t border-border/50">
       {children}
-      {!comment.is_deleted && <button type="button" onClick={toggle} disabled={loading} aria-pressed={roasted} aria-label={roasted ? 'Toast: restore original note' : 'Roast this note'} className="ml-auto shrink-0 flex items-center gap-1.5 text-[10px] text-primary hover:text-foreground disabled:opacity-60">{loading ? <Loader2 size={12} className="animate-spin"/> : <Flame size={12}/>} {loading ? 'Roasting…' : roasted ? 'Toast' : 'Roast'}</button>}
+      {!comment.is_deleted && <button type="button" onClick={toggle} disabled={loading} aria-pressed={roasted} aria-label={roasted ? 'Toast: restore original note' : 'Roast this note'} className="folio-control ml-auto shrink-0 flex items-center gap-1.5 text-[10px] text-primary hover:text-foreground disabled:opacity-60">{loading ? <Loader2 size={12} className="animate-spin"/> : <Flame size={12}/>} {loading ? 'Roasting…' : roasted ? 'Toast' : 'Roast'}</button>}
     </div>
   </>;
 }

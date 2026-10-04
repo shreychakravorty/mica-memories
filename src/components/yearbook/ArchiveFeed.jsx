@@ -14,7 +14,7 @@ export default function ArchiveFeed({ people, onSelect }) {
     <h2 id="all-testimonies" className="font-heading text-4xl mb-6">All testimonies</h2>
     {isLoading ? <p className="flex items-center gap-2 text-muted-foreground py-10"><Loader2 size={18} className="animate-spin"/> Opening the yearbook…</p> : isError ? <div role="alert"><p>These memories couldn’t load.</p><button onClick={() => refetch()} className="text-primary underline mt-3">Try again</button></div> : <>
       {!comments.length && <p className="text-muted-foreground">No testimonies are available.</p>}
-      <div className="columns-1 lg:columns-2 gap-5">{comments.map(comment => <CommentCard key={comment.id} comment={comment} direction="all" member={null} people={people} onSelect={onSelect}/>)}</div>
+      <div className="folio-gallery">{comments.map(comment => <CommentCard key={comment.id} comment={comment} direction="all" member={null} people={people} onSelect={onSelect}/>)}</div>
       {hasNextPage && <button disabled={isFetchingNextPage} onClick={() => fetchNextPage()} className="border border-border rounded px-6 py-3 text-sm text-primary mx-auto flex items-center gap-2 disabled:opacity-60">{isFetchingNextPage && <Loader2 size={16} className="animate-spin"/>}Show more testimonies</button>}
     </>}
   </section>;
