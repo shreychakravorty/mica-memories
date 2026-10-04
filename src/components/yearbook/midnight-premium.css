@@ -44,6 +44,10 @@
 .midnight-premium .folio-foot>div>span{font:10px ui-monospace,monospace;letter-spacing:.06em;color:#727a7e;text-transform:none}
 .midnight-premium .folio-control{border:0;background:transparent;color:#806d43;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:600;padding:6px 2px;cursor:pointer;transition:color .18s,transform .18s}
 .midnight-premium .folio-control:hover{color:#101d2a}.midnight-premium .folio-control:active{transform:scale(.97)}
+.midnight-premium .midnight-roastbutton{min-height:38px;padding:9px 16px;border:1px solid hsl(var(--primary));border-radius:22px;background:hsl(var(--primary) / .15);color:hsl(var(--foreground));font-size:13px;gap:7px;transition:background .18s,color .18s,transform .18s}
+.midnight-premium .midnight-roastbutton svg{width:16px;height:16px}
+.midnight-premium .midnight-roastbutton:hover{background:hsl(var(--primary) / .3)}
+.midnight-premium .midnight-roastbutton[aria-pressed="true"]{background:hsl(var(--primary));color:hsl(var(--primary-foreground))}
 .midnight-premium .folio-control:focus-visible,.midnight-premium .midnight-button:focus-visible,.midnight-premium .midnight-navbutton:focus-visible{outline:2px solid #bda16a;outline-offset:3px}
 .midnight-premium .midnight-button{display:block;margin:27px auto 0;border:1px solid #bda16a;border-radius:24px;background:transparent;color:#101d2a;padding:13px 25px;font-size:13px;cursor:pointer;transition:background .2s,color .2s}
 .midnight-premium .midnight-button:hover{background:#101d2a;color:#f5f4ee}.midnight-premium .midnight-button:active{transform:scale(.98)}

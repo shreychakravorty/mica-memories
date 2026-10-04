@@ -22,7 +22,7 @@ export default function RoastableNote({ comment, children }) {
     {error && <p role="alert" className="text-xs text-destructive mt-3">{error}</p>}
     <div className="folio-foot flex items-center gap-3 mt-7 pt-4 border-t border-border/50">
       {children}
-      {!comment.is_deleted && <button type="button" onClick={toggle} disabled={loading} aria-pressed={roasted} aria-label={roasted ? 'Toast: restore original note' : 'Roast this note'} className="folio-control ml-auto shrink-0 flex items-center gap-1.5 text-[10px] text-primary hover:text-foreground disabled:opacity-60">{loading ? <Loader2 size={12} className="animate-spin"/> : <Flame size={12}/>} {loading ? 'Roasting…' : roasted ? 'Toast' : 'Roast'}</button>}
+      {!comment.is_deleted && <button type="button" onClick={toggle} disabled={loading} aria-pressed={roasted} aria-label={roasted ? 'Toast: restore original note' : 'Roast this note'} className="folio-control midnight-roastbutton ml-auto shrink-0 flex items-center gap-1.5 text-[10px] text-primary hover:text-foreground disabled:opacity-60">{loading ? <Loader2 size={12} className="animate-spin"/> : <Flame size={12}/>} {loading ? 'Roasting…' : roasted ? 'Toast' : 'Roast'}</button>}
     </div>
   </>;
 }
