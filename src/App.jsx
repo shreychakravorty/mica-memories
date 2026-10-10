@@ -1,13 +1,15 @@
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
+import ProtectedRoute from '@/components/ProtectedRoute';
 // Add page imports here
 import Yearbook from '@/pages/Yearbook';
+import MediaArchive from '@/pages/MediaArchive';
 import Login from '@/pages/Login';
 import Register from '@/pages/Register';
 import ForgotPassword from '@/pages/ForgotPassword';
@@ -40,6 +42,9 @@ const AuthenticatedApp = () => {
   return (
     <Routes>
       <Route path="/" element={<Yearbook />} />
+      <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login?returnTo=/media" replace />} />}>
+        <Route path="/media" element={<MediaArchive />} />
+      </Route>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
